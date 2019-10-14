@@ -1,0 +1,10 @@
+.User {
+    width: 40%;
+    margin: 16px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px gray;
+    padding: 16px;
+    text-align: center;
+    color: rgb(6, 123, 219);
+    font-weight: bold;
+}
