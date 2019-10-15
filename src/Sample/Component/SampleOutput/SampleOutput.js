@@ -8,13 +8,13 @@ const sampleOutput = (props) => {
 
     const [answersState, setAnswersState] = useState({
         answers: [
-            {name: "C#", selected: false},
-            {name: "Java", selected: false},
-            {name: "Javascript", selected: false},
-            {name: "JSON", selected: false},
-            {name: "PHP", selected: false},
-            {name: "SQL", selected: false},
-            {name: "Typescript", selected: false}
+            {name: "C#", selected: false, value: "cs"},
+            {name: "Java", selected: false, value: "java"},
+            {name: "Javascript", selected: false, value: "javascript"},
+            {name: "JSON", selected: false, value: "json"},
+            {name: "PHP", selected: false, value: "php"},
+            {name: "SQL", selected: false, value: "sql"},
+            {name: "Typescript", selected: false, value: "typescript"}
         ]
     });
 
@@ -34,8 +34,7 @@ const sampleOutput = (props) => {
             return (
                 <LanguageButton key={index}
                     index={index}
-                    name={element.name}
-                    selected={element.selected}
+                    answer={element}
                     click={switchSelectedValueHandler}
                 />
             );

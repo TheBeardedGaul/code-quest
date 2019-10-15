@@ -7,7 +7,7 @@ const languageButton = (props) => {
     const getClassNames = () => {
         const componentClasses = classNames({
             'LanguageButton': true,
-            'SelectedLanguageButton': props.selected
+            'SelectedLanguageButton': props.answer.selected
         });
 
         return componentClasses;
@@ -17,7 +17,7 @@ const languageButton = (props) => {
         <div>
             <button className={getClassNames()}
                 onClick={() => props.click(props.index)} >
-                {props.name}
+                {props.answer.name}
             </button>
         </div>  
     )
