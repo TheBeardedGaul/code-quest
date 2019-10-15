@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import './LanguageButton.css';
 
 const languageButton = (props) => {
 
-    const [selectedState, setSelectedState] = useState({
-        selected: false
-    });
-
-    const switchSelectedValueHandler = (event) => {
-        setSelectedState({
-            selected: !selectedState.selected
-        });
-    }
-
     const getClassNames = () => {
         const componentClasses = classNames({
             'LanguageButton': true,
-            'SelectedLanguageButton': selectedState.selected
+            'SelectedLanguageButton': props.selected
         });
 
         return componentClasses;
@@ -26,7 +16,7 @@ const languageButton = (props) => {
     return (
         <div>
             <button className={getClassNames()}
-                onClick={() => switchSelectedValueHandler()} >
+                onClick={() => props.click(props.index)} >
                 {props.name}
             </button>
         </div>  
