@@ -17,7 +17,7 @@ const languageButton = (props) => {
         <div>
             <button className={getClassNames()}
                 onClick={() => props.click(props.index)} >
-                {props.answer.name}
+                {props.answer.language.name}
             </button>
         </div>  
     )

@@ -3,18 +3,19 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import './SampleOutput.css';
 import LanguageButton from '../../../Language/Component/LanguageButton/LanguageButton';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import Language from '../../../Language/Model/Languages';
 
 const sampleOutput = (props) => {
 
     const [answersState, setAnswersState] = useState({
         answers: [
-            {name: "C#", selected: false, value: "cs"},
-            {name: "Java", selected: false, value: "java"},
-            {name: "Javascript", selected: false, value: "javascript"},
-            {name: "JSON", selected: false, value: "json"},
-            {name: "PHP", selected: false, value: "php"},
-            {name: "SQL", selected: false, value: "sql"},
-            {name: "Typescript", selected: false, value: "typescript"}
+            {language: Language.CSHARP, selected: false},
+            {language: Language.JAVA, selected: false},
+            {language: Language.JS, selected: false},
+            {language: Language.JSON, selected: false},
+            {language: Language.PHP, selected: false},
+            {language: Language.SQL, selected: false},
+            {language: Language.TS, selected: false}
         ]
     });
 
@@ -22,7 +23,7 @@ const sampleOutput = (props) => {
         const updatedAnswers = answersState.answers;
         updatedAnswers[index].selected = !answersState.answers[index].selected;
         updatedAnswers
-            .filter(element => element.name !== answersState.answers[index].name)
+            .filter(element => element.language.name !== answersState.answers[index].language.name)
             .forEach(element => element.selected = false);
         setAnswersState({
             answers: updatedAnswers
