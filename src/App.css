@@ -5,3 +5,7 @@ body {
 .App {
   margin: 16px;
 }
+
+.AppBody {
+  display: flex;
+}

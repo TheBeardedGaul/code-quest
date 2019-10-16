@@ -1,4 +1,4 @@
-.LanguageButton, .SelectedLanguageButton {
+.CommonButton {
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -10,22 +10,11 @@
     transition: all 0.4s ease 0s;
     width: 110px;
     height: 40px;
+    background: #48555a;
 }
 
-.LanguageButton:hover, .SelectedLanguageButton:hover {
+.CommonButton:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
-}
-
-.LanguageButton {
-    background: #60a3bc;
-}
-
-.SelectedLanguageButton {
-    background: #b5b802;
-}
-
-.Valid {
-    background: #04a534 !important;
 }

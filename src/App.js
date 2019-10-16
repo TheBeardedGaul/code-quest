@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import SampleOutput from './Sample/Component/SampleOutput/SampleOutput';
+import Language from './Language/Model/Languages';
 import Csharp from './Sample/c#';
 import Java from './Sample/java';
 import Javascript from './Sample/javascript';
@@ -12,13 +13,13 @@ import Typescript from './Sample/typescript';
 const app = props => {
   const [samplesState] = useState({
     samples: [
-      {code: Javascript, language: 'javascript'},
-      {code: Typescript, language: 'typescript'},
-      {code: Csharp, language: 'cs'},
-      {code: Sql, language: 'sql'},
-      {code: Json, language: 'json'},
-      {code: Php, language: 'php'},
-      {code: Java, language: 'java'}
+      {code: Javascript, language: Language.JS},
+      {code: Typescript, language: Language.TS},
+      {code: Csharp, language: Language.CSHARP},
+      {code: Sql, language: Language.SQL},
+      {code: Json, language: Language.JSON},
+      {code: Php, language: Language.PHP},
+      {code: Java, language: Language.JAVA}
     ]
   });
 
@@ -33,7 +34,7 @@ const app = props => {
 
   return (
     <div className="App">
-      {renderSampleOutput()}
+        {renderSampleOutput()}
     </div>
   );
 }

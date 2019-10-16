@@ -7,7 +7,8 @@ const languageButton = (props) => {
     const getClassNames = () => {
         const componentClasses = classNames({
             'LanguageButton': true,
-            'SelectedLanguageButton': props.answer.selected
+            'SelectedLanguageButton': props.answer.selected,
+            'Valid': props.answer.valid
         });
 
         return componentClasses;

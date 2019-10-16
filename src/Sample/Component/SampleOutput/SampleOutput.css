@@ -8,13 +8,20 @@
     font-weight: bold;
 }
 
-.ButtonContainer {
+.ButtonContainer, .ButtonRevealContainer {
     text-align: center;
     display: flex;
+    margin-bottom: 5px;
 }
 
 .ButtonContainer button {
     display: block;
     float: left;
+    margin-right: 5px;
+}
+
+.ButtonRevealContainer button {
+    display: block;
+    float: right !important;
     margin-right: 5px;
 }

@@ -1,11 +1,11 @@
 const languages = {
     CSHARP: {name: "C#", value: "cs"},
-    JAVA: {name: "Java", selected: false, value: "java"},
-    JS: {name: "Javascript", selected: false, value: "javascript"},
-    JSON: {name: "JSON", selected: false, value: "json"},
-    PHP: {name: "PHP", selected: false, value: "php"},
-    SQL: {name: "SQL", selected: false, value: "sql"},
-    TS: {name: "Typescript", selected: false, value: "typescript"}
+    JAVA: {name: "Java", value: "java"},
+    JS: {name: "Javascript", value: "javascript"},
+    JSON: {name: "JSON", value: "json"},
+    PHP: {name: "PHP", value: "php"},
+    SQL: {name: "SQL", value: "sql"},
+    TS: {name: "Typescript", value: "typescript"}
 }
 
 export default languages;
